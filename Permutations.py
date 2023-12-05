@@ -15,5 +15,3 @@ def permute(nums):
         nums.append(n)
 
     return res
-
-print(permute([1,2,3,4]))
