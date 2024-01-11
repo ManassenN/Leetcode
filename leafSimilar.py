@@ -4,6 +4,7 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+        
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         first_tree_leafs,second_tree_leafs=[],[]
