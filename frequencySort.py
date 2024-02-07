@@ -1,9 +1,14 @@
 def frequencySort(s: str) -> str: 
-    char_count = {char: s.count(char) for char in s}
+        char_count = {}
+        for char in s:
+            char_count[char] = char_count.get(char, 0) + 1
 
-    sorted_dict_values = sorted(char_count.items(), key=lambda x: -x[1])
-    t = ''.join([char[0]*char[1] for char in sorted_dict_values])
+        # Sort the characters based on their frequency in decreasing order
+        sorted_chars = sorted(char_count, key=lambda x: char_count[x], reverse=True)
 
-    return t
+        # Construct the sorted string
+        sorted_string = ''.join([char * char_count[char] for char in sorted_chars])
 
-print(frequencySort('Aabb'))
+        return sorted_string
+
+frequencySort('tree')
