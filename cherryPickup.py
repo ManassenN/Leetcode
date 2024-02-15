@@ -16,5 +16,5 @@ def cherryPickup(grid):
             for c2_d in [-1,0,1]:
                 res = max(res,dfs(r+1,c1+c1_d,c2+c2_d))
         cache[(r,c1,c2)] =res + grid[r][c1] + grid[r][c2]
-        return cache[r,c1,c2]
+        return cache[(r,c1,c2)]
     return dfs(0,0,COLS - 1)
