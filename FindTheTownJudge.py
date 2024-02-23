@@ -13,6 +13,3 @@ def findJudge(n,trust):
 
     return -1        
     
-trust = [[1,3],[2,3]]
-n = 3
-findJudge(n,trust)
