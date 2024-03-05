@@ -1,0 +1,33 @@
+def minimumLength(s):
+    if len(s) == 1:
+        return 1
+    i,j = 0,len(s) - 1
+    count = 0
+    while (i < j):
+        if s[i] == s[j]:
+            k = i
+            while (k < j):
+                if s[k] == s[j]:
+                    k = k + 1
+                    continue
+                else:
+                    k = k - 1
+                    break
+            t = j
+            while (i < t):
+                if s[i] == s[t]:
+                    t = t - 1
+                    continue
+                else:
+                    t = t + 1
+                    break
+            s = s[k+1:t]    
+            i = 0
+            j = len(s) - 1   
+        else:
+            return len(s)
+
+    return len(s)
+
+s = "aabccabba"
+minimumLength(s)
