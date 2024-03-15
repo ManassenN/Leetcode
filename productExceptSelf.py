@@ -1,5 +1,5 @@
 from numpy import *
-
+# an o(n^2) solution.
 def productExceptSelf(nums):
     output = []
 
@@ -14,4 +14,4 @@ def productExceptSelf(nums):
 
     return output
 
-print(productExceptSelf([-1,1,0,-3,3]))
+print(productExceptSelf([-1,1,0,-3,3])) 
